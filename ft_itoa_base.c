@@ -37,7 +37,7 @@ char	*itoa_helper_neg(int nb, int base, char *res)
 	char	*arr;
 	int	i;
 
-	arr = "0123456789abcdef";
+	arr = "0123456789ABCDEF";
 	i = 0;
 	while (nb >= 1)
 	{
@@ -55,7 +55,7 @@ char	*itoa_helper(int nb, int base, char *res)
 	char	*arr;
 	int	i;
 
-	arr = "0123456789abcdef";
+	arr = "0123456789ABCDEF";
 	i = 0;
 	while (nb > 0)
 	{
