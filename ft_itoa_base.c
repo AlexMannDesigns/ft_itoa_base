@@ -1,8 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
-//convert int to null terminated string, in dynamically allocated char array
-//base is expressed as an int: 2 - 16
-//Always unsigned, unless base 10
 
 int	ft_strlen(char *str)
 {
@@ -14,12 +10,12 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-
-char	*itoa_realloc(char *str)
+char	*itoa_reverse(char *str)
 {
 	int	len;
 	int	i;
 	char	temp;
+	
 	len = ft_strlen(str) - 1;
 	i = 0;
 	while (i <= (len/2))
@@ -94,22 +90,5 @@ char	*ft_itoa_base(int value, int base)
 	}
 	else
 		res = itoa_helper(value, base, res);		
-	res = itoa_realloc(res);
-	return (res);
-}
-
-int	main(void)
-{
-	printf("base 2: %s\n", ft_itoa_base(42, 2));
-	printf("base 10: %s\n", ft_itoa_base(42, 10));
-	printf("base 16: %s\n", ft_itoa_base(42, 16));
-	printf("base 7, neg: %s\n", ft_itoa_base(-42, 7));
-	printf("base 10, neg: %s\n", ft_itoa_base(-42, 10));
-	printf("base 2: %s\n", ft_itoa_base(42521, 2));
-	printf("base 10: %s\n", ft_itoa_base(42521, 10));
-	printf("base 16: %s\n", ft_itoa_base(42521, 16));
-	printf("base 7, neg: %s\n", ft_itoa_base(-42521, 7));
-	printf("base 10, neg: %s\n", ft_itoa_base(-42521, 10));
-	
-	return (0);
+	return (itoa_reverse(res));
 }

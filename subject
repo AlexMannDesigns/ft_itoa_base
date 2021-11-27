@@ -19,12 +19,3 @@ minus sign (-). With any other base, value is always considered unsigned.
 Your function must be declared as follows:
 
 char \*ft_itoa_base(int value, int base);
-
-42 2
-
-42 / 2 = 21 r0
-21 / 2 = 10 r1
-10 / 2 = 5 r0
-5 / 2 = 2 r1
-2 / 2 = 1 r0
-1 / 2 = 0 r1
